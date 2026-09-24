@@ -1,0 +1,306 @@
+/* ═══ WHY GRID (art-terapiya) ═══ */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px
+}
+
+.why-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 26px 22px
+}
+
+.why-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    display: block
+}
+
+.why-card h3 {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.why-card p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.7
+}
+
+/* ═══ EXERCISES (art-terapiya) ═══ */
+#exercises {
+    background: var(--surface-warm);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line)
+}
+
+.ex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 18px
+}
+
+.ex-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--ec, var(--amber));
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow .25s
+}
+
+.ex-card:hover, .ex-card.open {
+    box-shadow: var(--shadow-md)
+}
+
+.ex-head {
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.ex-emoji {
+    font-size: 1.9rem;
+    flex-shrink: 0
+}
+
+.ex-meta {
+    flex: 1
+}
+
+.ex-title {
+    font-weight: 700;
+    font-size: 14.5px;
+    margin-bottom: 4px
+}
+
+.ex-sub {
+    font-size: 12px;
+    color: var(--ink-faint)
+}
+
+.ex-arr {
+    color: var(--ink-faint);
+    font-size: 12px;
+    transition: transform .3s;
+    flex-shrink: 0
+}
+
+.ex-card.open .ex-arr {
+    transform: rotate(180deg);
+    color: var(--amber-deep)
+}
+
+.ex-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, padding .3s;
+    padding: 0 22px
+}
+
+.ex-card.open .ex-body {
+    max-height: 700px;
+    padding: 0 22px 22px
+}
+
+.ex-body p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    margin-bottom: 10px
+}
+
+.ex-body strong {
+    color: var(--ink)
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 12px
+}
+
+.steps li {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    align-items: flex-start
+}
+
+.sn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ec, var(--amber));
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px
+}
+
+.ex-tip {
+    background: var(--amber-pale);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6
+}
+
+.ex-tip strong {
+    color: var(--amber-deep)
+}
+
+/* ═══ RULES (art-terapiya) ═══ */
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px
+}
+
+.rules-col {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 32px
+}
+
+.rules-col h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.rules-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.rules-col li {
+    display: flex;
+    gap: 12px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    align-items: flex-start
+}
+
+.do-mark {
+    color: var(--teal);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 15px
+}
+
+.dont-mark {
+    color: var(--red);
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 15px
+}
+
+/* ═══ PLAN (art-terapiya) ═══ */
+#plan {
+    background: var(--surface-warm);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line)
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px
+}
+
+.day-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 16px 10px;
+    text-align: center;
+    border-top: 3px solid var(--dc, var(--line))
+}
+
+.day-card.rest {
+    opacity: .5
+}
+
+.day-name {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: var(--ink-faint);
+    margin-bottom: 8px
+}
+
+.day-icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 8px
+}
+
+.day-act {
+    font-family: 'Fraunces', serif;
+    font-size: .85rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.25
+}
+
+.day-dur {
+    font-size: 10.5px;
+    color: var(--ink-faint)
+}
+
+/* ═══ CTA BAND (art-terapiya) ═══ */
+#cta-band {
+    text-align: center
+}
+
+#cta-band .card {
+    background: var(--teal);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    padding: 56px 40px
+}
+
+#cta-band h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+    margin-bottom: 14px
+}
+
+#cta-band p {
+    color: rgba(255, 255, 255, .8);
+    max-width: 480px;
+    margin: 0 auto 26px;
+    line-height: 1.7
+}
+
+
+/* ═══ RESPONSIVE (art-terapiya) ═══ */
+@media(max-width:920px){
+    .rules-grid{grid-template-columns:1fr}
+    .week-grid{grid-template-columns:repeat(4,1fr)}
+    .week-grid .day-card:nth-child(n+5){display:none}
+}
